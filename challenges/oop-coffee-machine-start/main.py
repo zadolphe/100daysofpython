@@ -8,18 +8,6 @@ resources = {
     "Coffee": 100,
 }
 
-#functions
-def calculateValue(coin):
-    total = 0.00
-    if coin == "dime":
-        total += .10
-    elif coin == "nickel":
-        total += .05
-    elif coin == "quarter":
-        total += .25
-
-    return total
-
 #instantiate objects
 moneyMachine = MoneyMachine()
 coffeeMaker = CoffeeMaker()
@@ -41,6 +29,6 @@ while is_on:
         if(inputCheck):
             if(moneyMachine.make_payment(drinkChoice.cost)):
                 coffeeMaker.make_coffee(drinkChoice)
-                is_on = False
+                #is_on = False
         else:
             print("Pease enter what you would like: ")
